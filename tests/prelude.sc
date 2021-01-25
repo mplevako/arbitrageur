@@ -1,5 +1,5 @@
 // scala 2.13.4
-import $file.^.prelude, ^.prelude.refined
+import $file.^.prelude, ^.prelude.circe, ^.prelude.refined
 
 val scalacheck = "1.15.2"
 
