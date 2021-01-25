@@ -1,0 +1,12 @@
+.ammonite/
+.bloop/
+*.class
+*.code-workspace
+.history/
+.idea/
+.iws
+*.log
+.metals/
+metals.sbt
+out/
+.vscode/
