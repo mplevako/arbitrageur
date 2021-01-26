@@ -1,14 +1,17 @@
 // scala 2.13.4
 val atto="0.9.0"
+val bigMath="2.3.0"
 val cats="2.3.1"
 val catsEffect = "2.3.1"
 val circe="0.13.0"
 val http4s="1.0.0-M10"
 val refined = "0.9.20"
+val slf4j="1.7.30"
 val supertagged="2.0-RC2"
 
 interp.load.ivy("org.tpolecat" %% "atto-core" % atto)
 interp.load.ivy("org.tpolecat" %% "atto-refined" % atto)
+interp.load.ivy("ch.obermuhlner" % "big-math" % bigMath)
 interp.load.ivy("org.typelevel" %% "cats-core" % cats)
 interp.load.ivy("org.typelevel" %% "cats-effect" % catsEffect)
 interp.load.ivy("io.circe" %% "circe-core" % circe)
@@ -18,6 +21,7 @@ interp.load.ivy("org.http4s" %% "http4s-dsl" % http4s)
 interp.load.ivy("org.http4s" %% "http4s-blaze-client" % http4s)
 interp.load.ivy("eu.timepit" %% "refined" % refined)
 interp.load.ivy("org.rudogma" %% "supertagged" % supertagged)
+interp.load.ivy("org.slf4j" % "slf4j-simple" % slf4j)
 
 private val scalacOptions = List(
   "-Xfatal-warnings",
