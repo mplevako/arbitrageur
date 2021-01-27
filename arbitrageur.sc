@@ -18,7 +18,12 @@ import org.http4s.client.middleware.FollowRedirect
 import java.math.BigDecimal.{ONE, ZERO}
 
 @main
-def main(url: String, maxRedirects: Int = 3): Unit = {
+def main(@arg(doc = "the URL of an exchange rate provider that returns rates as a JSON object with \"currency code\"" +
+                    " pairs joined through the _ character as the names and the rates as the values, e.g.:\n" +
+                    "{\"QUATLOOS_GOLDPRESSEDLATINUM\":0.0072973525628, \"GOLDPRESSEDLATINUM_QUATLOOS\":1.570359992057584240145136,\n" +
+                    "\"NUYEN_EURODOLLAR\":2.718281828459045235360287471352662497757247093,\n" +
+                    "\"FLANIANPOBBLEBEAD_FLANIANPOBBLEBEAD\":1.0}") url: String,
+         @arg(doc = "the maximum number of URL redirections to follow") maxRedirects: Int = 3): Unit = {
   import scala.concurrent.ExecutionContext.global
 
   implicit val cs: ContextShift[IO] = IO.contextShift(global)
