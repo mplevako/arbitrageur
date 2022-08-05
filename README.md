@@ -1,5 +1,9 @@
 An implementation of a max-plus tropical algebra based algorithm for finding the best exchange rate arbitrage opportunities
-among n "currencies", that requires O(n⁴) time to run under an arbitrary-precision computational model.
+among n "currencies", that requires O(n⁴) time on the real RAM, where additions and comparisons of reals are unit cost.
+
+The well-known trick of exponentiation by squaring can be used to improve the complexity to O(n³log n).
+
+The running time can be further improved to n⁴/2ˡᵒᵍ ͩ ⁿ for some positive d.
 
 ### Running
 Ensure the latest version of [Ammonite](https://ammonite.io/) is installed, then run
